@@ -1,0 +1,43 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="38dp"
+    android:height="36dp"
+    android:viewportWidth="38"
+    android:viewportHeight="36">
+  <path
+      android:pathData="m1,8c0,-1 1,-1 1,-1h17c0.049,-1 0,-5 0,-5 0.009,-0.447 0.109,-0.846 0.523,-1.016s0.889,-0.077 1.209,0.235l16,16c0.422,0.435 0.422,1.127 0,1.562l-16,16c-0.32,0.312 -0.795,0.405 -1.209,0.235s-0.514,-0.569 -0.523,-1.016v-5h-17.049s-1,0 -1,-1c0,-6 0.049,-14 0.049,-20z"
+      android:fillColor="#a54005"/>
+  <path
+      android:pathData="m2.156,27.781c0.002,-5.903 0.061,-13.643 0.063,-19.562l16.781,0c0.649,0.001 1.186,-0.508 1.219,-1.157 0.053,-1.093 0.008,-4.057 0,-4.624l15.562,15.562 -15.562,15.531l0,-4.531c0,-0.673 -0.546,-1.219 -1.219,-1.219l-16.844,0z">
+    <aapt:attr name="android:fillColor">
+      <gradient 
+          android:centerX="6.093"
+          android:centerY="21.337"
+          android:gradientRadius="19.233"
+          android:type="radial">
+        <item android:offset="0" android:color="#FFF0D81F"/>
+        <item android:offset="1" android:color="#FFF07D0A"/>
+      </gradient>
+    </aapt:attr>
+  </path>
+  <path
+      android:pathData="m4,27c-1.031,-0.906 -1,-17 0,-18s14.11,0.122 15,0.094c3,-0.094 1,-4.094 3,-3.094 3,2 12,11 12,12s-9,10 -12,12c-2,1 0,-3 -3,-3.094 -0.935,-0.029 -14.031,1.188 -15,0.094z">
+    <aapt:attr name="android:fillColor">
+      <gradient 
+          android:startX="3.238"
+          android:startY="18"
+          android:endX="34.922"
+          android:endY="13.857"
+          android:type="linear">
+        <item android:offset="0" android:color="#A0F3AC39"/>
+        <item android:offset="1" android:color="#C7FCBA94"/>
+      </gradient>
+    </aapt:attr>
+  </path>
+  <path
+      android:pathData="m22,5.973c3,2 12,11 12,12s-5.459,7.027 -8.502,9.027c0,-0.973 3.502,-4 3.502,-9 0,-4 -9,-9 -7,-12.027z">
+  </path>
+  <path
+      android:pathData="m3.276,18.035c0.004,-4.262 0.25,-8.531 0.75,-9.031 0.698,-0.699 6.176,-0.4 10.188,-0.157 2.786,0.153 2.786,0.153 -0.214,1.153 -10.479,3.493 -8.316,16.082 -7.943,17.41 -1.007,-0.063 -1.826,-0.175 -2.031,-0.406 -0.515,-0.454 -0.754,-4.707 -0.75,-8.969z">
+  </path>
+</vector>

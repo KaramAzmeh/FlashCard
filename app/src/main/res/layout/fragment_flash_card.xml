@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FlashCardFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.android.flashcard.FlashCardViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/question_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/wizard"
+            android:onClick="@{() -> viewModel.flipCard()}"
+            android:contentDescription="@string/flashcard"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/answer"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@{viewModel.card.answer}"
+            android:onClick="@{() -> viewModel.flipCard()}"
+            tools:text = "Answer"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            />
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="24dp"
+            android:contentDescription="@string/flashcard"
+            app:layout_constraintEnd_toEndOf="@id/question_image"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/prev"
+            app:layout_constraintTop_toBottomOf="@id/question_image"
+            app:srcCompat="@drawable/ic_jean_victor_balin_arrow_orange_right"
+            android:clickable="@{!viewModel.showAnswer}"/>
+
+        <ImageView
+            android:id="@+id/prev"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="24dp"
+            android:contentDescription="@string/flashcard"
+            app:layout_constraintEnd_toStartOf="@id/next"
+            app:layout_constraintStart_toStartOf="@id/question_image"
+            app:layout_constraintTop_toBottomOf="@id/question_image"
+            app:srcCompat="@drawable/ic_jean_victor_balin_arrow_orange_left"
+            android:clickable="@{!viewModel.showAnswer}"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

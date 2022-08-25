@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".QuizFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.android.flashcard.QuizViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/question_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toTopOf="@id/wizard_text"
+            android:layout_marginTop="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/wizard"
+            android:contentDescription="@string/flashcard" />
+
+
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="48dp"
+            android:layout_marginTop="48dp"
+            android:contentDescription="@string/flashcard"
+            app:layout_constraintEnd_toEndOf="@id/question_image"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/prev"
+            app:layout_constraintTop_toBottomOf="@id/question_image"
+            app:srcCompat="@drawable/ic_jean_victor_balin_arrow_orange_right" />
+
+        <ImageView
+            android:id="@+id/prev"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="48dp"
+            android:layout_marginTop="48dp"
+            android:contentDescription="@string/flashcard"
+            app:layout_constraintEnd_toStartOf="@id/next"
+            app:layout_constraintStart_toStartOf="@id/question_image"
+            app:layout_constraintTop_toBottomOf="@id/question_image"
+            app:srcCompat="@drawable/ic_jean_victor_balin_arrow_orange_left" />
+
+
+        <TextView
+            android:id="@+id/wizard_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/cardview_default_radius"
+            android:layout_marginTop="56dp"
+            android:text="@string/androidx_startup"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintEnd_toEndOf="@id/question_image"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@id/question_image"
+            app:layout_constraintTop_toBottomOf="@id/question_image"
+            tools:text="Wizard" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
